@@ -84,7 +84,7 @@ jobs:
 
       - name: Stop and remove container if running
         run: |
-         docker ps -q --filter "name=naveed-search-bot" | grep -q . && docker stop naveed-search-bot && docker rm -fv naveed-search-bot
+         docker ps -q --filter "name=naveed_openai_ecr" | grep -q . && docker stop naveed_openai_ecr && docker rm -fv naveed_openai_ecr
 
       - name: Run Docker Image to serve users
         run: |
